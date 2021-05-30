@@ -9,7 +9,7 @@ const ExpenseItem = ({ expense, handleRemoveExpense }) => {
       <li>
          <div className="expense-info">
             <h3>{expense.title}</h3>
-            <span>{expense.amount}</span>
+            <span>{expense.amount.toFixed(2)}</span>
          </div>
          <span>{`${day} - ${month} - ${year}`}</span>
          <button onClick={() => handleRemoveExpense(expense.id)}>Remove</button>

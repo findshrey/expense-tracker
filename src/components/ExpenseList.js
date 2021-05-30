@@ -8,12 +8,16 @@ const ExpenseList = () => {
 
    return (
       <section className="expense-list">
-         <h2>Expense List</h2>
+         <h2>All Transactions</h2>
          <ul className="expense-list-inner">
             {
-               expenses.map((expense) => {
-                  return <ExpenseItem key={expense.id} expense={expense} handleRemoveExpense={handleRemoveExpense} />
-               })
+               expenses.map((expense) => (
+                  <ExpenseItem
+                     key={expense.id}
+                     expense={expense}
+                     handleRemoveExpense={handleRemoveExpense}
+                  />
+               ))
             }
          </ul>
       </section>

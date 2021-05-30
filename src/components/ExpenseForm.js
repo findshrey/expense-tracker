@@ -39,15 +39,15 @@ const ExpenseForm = () => {
       <form onSubmit={handleSubmit}>
          <div className="form-control">
             <label >Title</label>
-            <input type="text" value={title} onChange={handleTitle} />
+            <input type="text" value={title} onChange={handleTitle} required />
          </div>
          <div className="form-control">
             <label>Amount</label>
-            <input type="number" min="0" value={amount} onChange={handleAmount} />
+            <input type="number" min="0" value={amount} onChange={handleAmount} required />
          </div>
          <div className="form-control">
             <label>Date</label>
-            <input type="date" min="2020-01-01" value={date} onChange={handleDateChange} />
+            <input type="date" min="2020-01-01" value={date} onChange={handleDateChange} required />
          </div>
          <div className="form-control">
             <label>Expense Type</label>
