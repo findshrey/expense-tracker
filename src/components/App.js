@@ -1,10 +1,18 @@
 import React from 'react'
+import AddExpenseForm from './AddExpenseForm'
+import ExpenseList from './ExpenseList'
+
+import Header from './Header'
+import Summary from './Summary'
 
 const App = () => {
    return (
-      <h1>
-         REACT APP
-      </h1>
+      <>
+         <Header />
+         <Summary />
+         <ExpenseList />
+         <AddExpenseForm />
+      </>
    )
 }
 
