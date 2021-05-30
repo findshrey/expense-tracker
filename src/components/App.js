@@ -1,18 +1,19 @@
 import React from 'react'
+
+import { ExpenseProvider } from './../context/ExpenseContext'
+import Header from './Header'
+import Summary from './Summary'
 import AddExpenseForm from './AddExpenseForm'
 import ExpenseList from './ExpenseList'
 
-import Header from './Header'
-import Summary from './Summary'
-
 const App = () => {
    return (
-      <>
+      <ExpenseProvider>
          <Header />
          <Summary />
-         <ExpenseList />
          <AddExpenseForm />
-      </>
+         <ExpenseList />
+      </ExpenseProvider>
    )
 }
 
