@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ExpenseItem = ({ expense }) => {
+const ExpenseItem = ({ expense, handleRemoveExpense }) => {
    const day = expense.date.toLocaleString('en-US', { day: '2-digit' })
    const month = expense.date.toLocaleString('en-US', { month: 'long' })
    const year = expense.date.getFullYear()
@@ -12,6 +12,7 @@ const ExpenseItem = ({ expense }) => {
             <span>{expense.amount}</span>
          </div>
          <span>{`${day} - ${month} - ${year}`}</span>
+         <button onClick={() => handleRemoveExpense(expense.id)}>Remove</button>
       </li>
    )
 }

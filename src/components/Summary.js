@@ -5,7 +5,6 @@ import ExpenseContext from './../context/ExpenseContext'
 const Summary = () => {
    const { expenses } = useContext(ExpenseContext)
 
-   console.log(expenses);
    return (
       <section>
          <p>Summary</p>

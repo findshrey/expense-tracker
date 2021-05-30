@@ -4,7 +4,7 @@ import ExpenseContext from './../context/ExpenseContext'
 import ExpenseItem from './ExpenseItem'
 
 const ExpenseList = () => {
-   const { expenses } = useContext(ExpenseContext)
+   const { expenses, handleRemoveExpense } = useContext(ExpenseContext)
 
    return (
       <section className="expense-list">
@@ -12,7 +12,7 @@ const ExpenseList = () => {
          <ul className="expense-list-inner">
             {
                expenses.map((expense) => {
-                  return <ExpenseItem key={expense.id} expense={expense} />
+                  return <ExpenseItem key={expense.id} expense={expense} handleRemoveExpense={handleRemoveExpense} />
                })
             }
          </ul>

@@ -25,14 +25,16 @@ const ExpenseProvider = ({ children }) => {
 
    // Add new expense
    const handleAddExpense = (expense) => {
-      setExpenses(prevExpenses => {
+      setExpenses((prevExpenses) => {
          return [...prevExpenses, expense]
       })
    }
 
    // Remove an expense
    const handleRemoveExpense = (id) => {
+      const updatedExpenses = expenses.filter((expense) => expense.id !== id)
 
+      setExpenses(updatedExpenses)
    }
 
    return (

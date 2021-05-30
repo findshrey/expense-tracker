@@ -7,7 +7,7 @@ const ExpenseForm = () => {
    const [amount, setAmount] = useState('')
    const [date, setDate] = useState('')
 
-   const { handleAddExpense, handleRemoveExpense } = useContext(ExpenseContext)
+   const { handleAddExpense } = useContext(ExpenseContext)
 
    const handleTitle = (e) => setTitle(e.target.value)
    const handleAmount = (e) => setAmount(e.target.value)
