@@ -3,7 +3,7 @@ import React from 'react'
 import { ExpenseProvider } from './../context/ExpenseContext'
 import Header from './Header'
 import Summary from './Summary'
-import AddExpenseForm from './AddExpenseForm'
+import ExpenseForm from './ExpenseForm'
 import ExpenseList from './ExpenseList'
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <ExpenseProvider>
          <Header />
          <Summary />
-         <AddExpenseForm />
+         <ExpenseForm />
          <ExpenseList />
       </ExpenseProvider>
    )
