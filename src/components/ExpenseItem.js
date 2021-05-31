@@ -12,15 +12,23 @@ const ExpenseItem = ({ expense, handleRemoveExpense }) => {
       setModalState((prevState) => !prevState)
    }
 
+   const sign = expense.amount > 0 ? '+' : '-'
+
    return (
       <>
-         {modalState && <Modal handleRemoveExpense={handleRemoveExpense.bind(null, expense.id)} handleModal={handleModal} />}
+         {
+            modalState &&
+            <Modal
+               handleRemoveExpense={handleRemoveExpense.bind(null, expense.id)}
+               handleModal={handleModal}
+            />
+         }
          <li className="expense-item" onClick={handleModal}>
             <div className="expense-info">
                <h4>{expense.title}</h4>
                <span>{`${day} - ${month} - ${year}`}</span>
             </div>
-            <span>{expense.amount.toFixed(2)}</span>
+            <span>{`${sign} ₹${Math.abs(expense.amount).toFixed(2)}`}</span>
          </li>
       </>
    )
