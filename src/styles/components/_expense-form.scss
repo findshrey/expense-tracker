@@ -1,0 +1,35 @@
+.expense-form {
+   padding: $padding-section;
+
+   .container {
+      display: flex;
+      // justify-content: center;
+   }
+
+   .form {
+      width: 100%;
+
+      label {
+         display: block;
+         text-align: center;
+      }
+
+      input {
+         width: 100%;
+      }
+
+      select {
+         width: 100%;
+      }
+
+      .expense-form-actions {
+         display: flex;
+         justify-content: center;
+         margin-top: 2rem;
+
+         button {
+            margin: 0 0.5rem;
+         }
+      }
+   }
+}

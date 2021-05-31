@@ -1,0 +1,23 @@
+.expense-list {
+   padding: $padding-section;
+
+   h2 {
+      text-align: center;
+   }
+
+   .expense-list-actions {
+      text-align: center;
+      margin: 2rem 0;
+
+      button {
+         margin: 0 0.5rem;
+      }
+   }
+}
+
+.expense-item {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 1rem 0;
+}

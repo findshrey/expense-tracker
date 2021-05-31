@@ -1,0 +1,18 @@
+.overview {
+   padding: $padding-section;
+   
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+.overview-lower {
+   display: flex;
+   margin-top: 1.5rem;
+   
+   .lower-inner {
+      margin: 0 1rem;
+   }
+}

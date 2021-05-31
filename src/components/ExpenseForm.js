@@ -36,9 +36,9 @@ const ExpenseForm = () => {
    }
 
    return (
-      <section>
+      <section className="expense-form">
          <div className="container">
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
                <div className="form-control">
                   <label >Title</label>
                   <input type="text" value={title} onChange={handleTitle} required />
@@ -58,7 +58,7 @@ const ExpenseForm = () => {
                      <option value="expense">Expense</option>
                   </select>
                </div>
-               <div className="expense-actions">
+               <div className="expense-form-actions">
                   <button type="submit">Add Expense</button>
                   <button type="button">Cancel</button>
                </div>
