@@ -9,17 +9,16 @@ const ExpenseProvider = ({ children }) => {
       amount: 94.12,
       date: new Date(2020, 7, 14),
    },
-   { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
    {
-      id: 'e3',
+      id: 'e2',
       title: 'Car Insurance',
-      amount: 294.67,
+      amount: 150.67,
       date: new Date(2021, 2, 28),
    },
    {
-      id: 'e4',
+      id: 'e3',
       title: 'New Desk (Wooden)',
-      amount: 450,
+      amount: -75.68,
       date: new Date(2021, 5, 12),
    },])
 

@@ -18,11 +18,13 @@ const Summary = () => {
 
    return (
       <section>
-         <h2>Current Balance</h2>
-         <div>{totalBalance.toFixed(2)}</div>
-         <div>
-            <h3>Income {totalIncome.toFixed(2)}</h3>
-            <h3>Expense {totalExpense.toFixed(2)}</h3>
+         <div className="container">
+            <h2>Current Balance</h2>
+            <div>{totalBalance.toFixed(2)}</div>
+            <div>
+               <h3>Income {totalIncome.toFixed(2)}</h3>
+               <h3>Expense {totalExpense.toFixed(2)}</h3>
+            </div>
          </div>
       </section>
    )

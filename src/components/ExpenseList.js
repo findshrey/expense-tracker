@@ -23,23 +23,25 @@ const ExpenseList = () => {
 
    return (
       <section className="expense-list">
-         <h2>All Transactions</h2>
-         <div className="expense-list-actions">
-            <button onClick={() => handleFilter('all')}>All</button>
-            <button onClick={() => handleFilter('income')}>Income</button>
-            <button onClick={() => handleFilter('expense')}>Expense</button>
+         <div className="container">
+            <h2>All Transactions</h2>
+            <div className="expense-list-actions">
+               <button onClick={() => handleFilter('all')}>All</button>
+               <button onClick={() => handleFilter('income')}>Income</button>
+               <button onClick={() => handleFilter('expense')}>Expense</button>
+            </div>
+            <ul className="expense-list-inner">
+               {
+                  renderedExpenses.map((expense) => (
+                     <ExpenseItem
+                        key={expense.id}
+                        expense={expense}
+                        handleRemoveExpense={handleRemoveExpense}
+                     />
+                  ))
+               }
+            </ul>
          </div>
-         <ul className="expense-list-inner">
-            {
-               renderedExpenses.map((expense) => (
-                  <ExpenseItem
-                     key={expense.id}
-                     expense={expense}
-                     handleRemoveExpense={handleRemoveExpense}
-                  />
-               ))
-            }
-         </ul>
       </section>
    )
 }

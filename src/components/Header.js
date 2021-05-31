@@ -3,7 +3,9 @@ import React from 'react'
 const Header = () => {
    return (
       <header>
-         <h1>Expense Tracker</h1>
+         <div className="container">
+            <h1>Expense Tracker</h1>
+         </div>
       </header>
    )
 }

@@ -10,9 +10,11 @@ const App = () => {
    return (
       <ExpenseProvider>
          <Header />
-         <Summary />
-         <ExpenseForm />
-         <ExpenseList />
+         <main>
+            <Summary />
+            <ExpenseForm />
+            <ExpenseList />
+         </main>
       </ExpenseProvider>
    )
 }
