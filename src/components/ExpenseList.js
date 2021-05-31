@@ -24,7 +24,9 @@ const ExpenseList = () => {
    return (
       <section className="expense-list">
          <div className="container">
-            <h2>All Transactions</h2>
+            <header>
+               <h2>All Transactions</h2>
+            </header>
             <div className="expense-list-actions">
                <button onClick={() => handleFilter('all')}>All</button>
                <button onClick={() => handleFilter('income')}>Income</button>

@@ -38,6 +38,9 @@ const ExpenseForm = () => {
    return (
       <section className="expense-form">
          <div className="container">
+            <header>
+               <h2>Add a new transaction</h2>
+            </header>
             <form className="form" onSubmit={handleSubmit}>
                <div className="form-control">
                   <label >Title</label>
@@ -52,14 +55,14 @@ const ExpenseForm = () => {
                   <input type="date" min="2020-01-01" value={date} onChange={handleDateChange} required />
                </div>
                <div className="form-control">
-                  <label>Expense Type</label>
+                  <label>Transaction Type</label>
                   <select value={expenseType} onChange={handleExpenseType}>
                      <option value="income">Income</option>
                      <option value="expense">Expense</option>
                   </select>
                </div>
                <div className="expense-form-actions">
-                  <button type="submit">Add Expense</button>
+                  <button type="submit">Add Transaction</button>
                   <button type="button">Cancel</button>
                </div>
             </form>

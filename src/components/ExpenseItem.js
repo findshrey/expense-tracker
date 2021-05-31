@@ -1,19 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import Modal from './UI/Modal'
 
 const ExpenseItem = ({ expense, handleRemoveExpense }) => {
+   const [modalState, setModalState] = useState(false)
    const day = expense.date.toLocaleString('en-US', { day: '2-digit' })
    const month = expense.date.toLocaleString('en-US', { month: 'long' })
    const year = expense.date.getFullYear()
 
+   const handleModal = () => {
+      setModalState((prevState) => !prevState)
+   }
+
    return (
-      <li className="expense-item">
-         <div className="expense-info">
-            <h4>{expense.title}</h4>
-            <span>{`${day} - ${month} - ${year}`}</span>
-         </div>
-         <span>{expense.amount.toFixed(2)}</span>
-         {/* <button onClick={() => handleRemoveExpense(expense.id)}>Remove</button> */}
-      </li>
+      <>
+         {modalState && <Modal handleRemoveExpense={handleRemoveExpense.bind(null, expense.id)} handleModal={handleModal} />}
+         <li className="expense-item" onClick={handleModal}>
+            <div className="expense-info">
+               <h4>{expense.title}</h4>
+               <span>{`${day} - ${month} - ${year}`}</span>
+            </div>
+            <span>{expense.amount.toFixed(2)}</span>
+         </li>
+      </>
    )
 }
 
