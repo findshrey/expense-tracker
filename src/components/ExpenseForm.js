@@ -32,7 +32,7 @@ const ExpenseForm = () => {
    } = useInput((value) => value.trim() !== '')
 
    const [expenseType, setExpenseType] = useState('income')
-   const { handleAddExpense } = useContext(ExpenseContext)
+   const { handleAddExpense: ctxAddExpense } = useContext(ExpenseContext)
 
    const handleExpenseType = (e) => {
       setExpenseType(e.target.value)
@@ -58,7 +58,7 @@ const ExpenseForm = () => {
          date: new Date(date)
       }
 
-      handleAddExpense(expenseData)
+      ctxAddExpense(expenseData)
 
       titleReset()
       amountReset()

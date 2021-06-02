@@ -15,11 +15,14 @@ const filterExpenses = (expenses, filterBy) => {
 
 const ExpenseList = () => {
    const [filterBy, setFilterBy] = useState('all')
-   const { expenses, handleRemoveExpense } = useContext(ExpenseContext)
+   const {
+      expenses: ctxExpenses,
+      handleRemoveExpense: ctxRemoveExpense
+   } = useContext(ExpenseContext)
 
    const handleFilter = (option) => setFilterBy(option)
 
-   const renderedExpenses = filterExpenses(expenses, filterBy)
+   const renderedExpenses = filterExpenses(ctxExpenses, filterBy)
 
    return (
       <section className="expense-list">
@@ -38,7 +41,7 @@ const ExpenseList = () => {
                      <ExpenseItem
                         key={expense.id}
                         expense={expense}
-                        handleRemoveExpense={handleRemoveExpense}
+                        ctxRemoveExpense={ctxRemoveExpense}
                      />
                   ))
                }

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const Modal = ({ handleRemoveExpense, handleModal }) => {
+const Modal = ({ ctxRemoveExpense, handleModal }) => {
    return ReactDOM.createPortal(
       <>
          <div className="modal-backdrop" />
@@ -13,7 +13,7 @@ const Modal = ({ handleRemoveExpense, handleModal }) => {
                <p>Are you sure you want to remove this transaction?</p>
             </div>
             <footer>
-               <button onClick={handleRemoveExpense}>Yes</button>
+               <button onClick={ctxRemoveExpense}>Yes</button>
                <button onClick={handleModal}>No</button>
             </footer>
          </div>

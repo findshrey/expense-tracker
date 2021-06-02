@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import Modal from './UI/Modal'
 
-const ExpenseItem = ({ expense, handleRemoveExpense }) => {
+const ExpenseItem = ({ expense, ctxRemoveExpense }) => {
    const [modalState, setModalState] = useState(false)
    const day = expense.date.toLocaleString('en-US', { day: '2-digit' })
    const month = expense.date.toLocaleString('en-US', { month: 'long' })
@@ -19,7 +19,7 @@ const ExpenseItem = ({ expense, handleRemoveExpense }) => {
          {
             modalState &&
             <Modal
-               handleRemoveExpense={handleRemoveExpense.bind(null, expense.id)}
+               ctxRemoveExpense={ctxRemoveExpense.bind(null, expense.id)}
                handleModal={handleModal}
             />
          }

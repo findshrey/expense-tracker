@@ -36,8 +36,14 @@ const ExpenseProvider = ({ children }) => {
       setExpenses(updatedExpenses)
    }
 
+   const contextData = {
+      expenses,
+      handleAddExpense,
+      handleRemoveExpense
+   }
+
    return (
-      <ExpenseContext.Provider value={{ expenses, handleAddExpense, handleRemoveExpense }}>
+      <ExpenseContext.Provider value={contextData}>
          {children}
       </ExpenseContext.Provider>
    )

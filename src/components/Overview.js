@@ -3,13 +3,13 @@ import React, { useContext } from 'react'
 import ExpenseContext from '../context/ExpenseContext'
 
 const Overview = () => {
-   const { expenses } = useContext(ExpenseContext)
+   const { expenses: ctxExpense } = useContext(ExpenseContext)
 
    let totalBalance = 0
    let totalIncome = 0
    let totalExpense = 0
 
-   for (const item of expenses) {
+   for (const item of ctxExpense) {
       item.amount > 0 ?
          (totalIncome += item.amount) : (totalExpense += item.amount)
 
